@@ -1,0 +1,147 @@
+---
+title: "`smartify` tests"
+author: "fnaufel@gmail.com"
+date: "`r Sys.Date()`"
+output: 
+  xaringan::moon_reader:
+    lib_dir: libs
+    includes:
+      in_header: "in_header.html"
+      after_body: "after_body.html"
+    nature:
+      ratio: "16:9"
+---
+
+These tests are based on those at http://www.leancrew.com/all-this/misc/smarten-test.html.
+
+I have modified them.
+
+Some of the tests are failing, but I would need a parser --- and not just regexes --- to solve this.
+
+---
+
+# Tests: single quotes
+
+* Let's look at two apostrophe's [sic].
+
+* Let's look at three apostrophes: won't, shouldn't.
+
+* I haven't tried ('parentheses' yet).
+
+* I haven't tried ('parentheses') yet.
+
+* What about '(parentheses)'?.
+
+* And '[brackets]'?.
+
+* I haven't tried ['brackets' yet].
+
+* I haven't tried ['brackets'] yet.
+
+* What about slashes/'virgules'?
+
+* And {'curly' braces}?
+
+---
+
+# Tests: double quotes
+
+* A double quote---"within" dashes---would be nice.
+
+* A double quote---"within dashes"---would be nice.
+
+* I haven't tried ("parentheses" yet).
+
+* I haven't tried ("parentheses") yet.
+
+* What about "(parentheses)"?.
+
+* And "[brackets]"?.
+
+* I haven't tried ["brackets" yet].
+
+* I haven't tried ["brackets"] yet.
+
+* What about slashes/"virgules"?
+
+* And {"curly" braces}?
+
+
+---
+
+# Tests: nested quotes
+
+"'Let's try "nested" quotes,' he said."
+
+
+---
+
+# Tests: dashes
+
+* From pages 1--3.
+
+* I don't know---he said.
+
+* ---No!
+
+  ---Yes!
+
+---
+
+# Tests: ellipsis
+
+* And now... 
+
+* ...the end is near
+
+---
+
+# Misc
+
+* "'Twas the night before Christmas..." with a straight apostrophe.
+
+* "‘Twas the night before Christmas..." with an explicit curly apostrophe.
+
+---
+
+# Code
+
+* Punctuation in code blocks and their output cannot be changed:
+
+```{r}
+chars <- c('a', 'b', 'c', '...', '--', '---')
+
+chars
+```
+
+* This also goes for inline stuff, like `---, --, "a", 'a', ...`
+
+  Compare ---, --, "a", 'a', ...
+
+---
+
+# Pre
+
+* Punctuation in `pre` blocks cannot be changed:
+
+```
+---, --, "a", 'a', ...
+```
+
+---
+
+# Mathjax
+
+* I do not want primes or dashes replaced in display math:
+
+$$'x' = y'' \leq x--; 
+x; 
+x''...; 
+\dots$$
+
+* and certainly not in inline math: $x' = y'' \leq x--;$.
+
+* It's working, but in display math neither the opening `$$` nor the closing `$$` can be in lines by themselves. 
+
+* Ideally, as Yihui Xie recommends [here](https://github.com/yihui/xaringan/issues/82#issuecomment-343957854), from the initial `$$` to the final `$$`, it should all be one line.
+
