@@ -82,4 +82,4 @@ In the [example directory](https://github.com/fnaufel/smartify/tree/master/examp
 
 * I want to thank Yihui Xie for promptly responding to my [Stack Overflow question](https://stackoverflow.com/questions/60922328/why-are-smart-quotes-and-em-dashes-not-appearing-in-xaringan-slides) about ugly quotes, and of course, for all the great packages he has given us.
 
-* The regular expressions that **smartify** uses have been shamelessly copied from the expressions in a [2010 blog post](http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/) by Dr. Drang, licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License.
+* The regular expressions that **smartify** uses have been shamelessly copied from the expressions in a [2010 blog post](http://www.leancrew.com/all-this/2010/11/smart-quotes-in-javascript/) by [Dr. Drang](https://github.com/drdrang), licensed under a Creative Commons Attribution-Share Alike 3.0 Unported License.
