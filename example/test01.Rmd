@@ -1,6 +1,6 @@
 ---
 title: "`smartify` tests"
-author: "https://github.com/fnaufel/smartify"
+author: "https://github.com/fnaufel/xaringan-smartify"
 date: "`r Sys.Date()`"
 output: 
   xaringan::moon_reader:
