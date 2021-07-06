@@ -63,7 +63,7 @@ In the [example directory](https://github.com/fnaufel/xaringan-smartify/tree/mas
 
 ## Caveats
 
-* **JQuery:** **smartify** uses [JQuery](https://jquery.com/). A browser showing your presentation will have to download approximately 70kB of Javascript code to run **xaringan-smartify**. This is usually negligible, especially as modern browsers will keep recently used Javascript files in a cache.
+* **JQuery:** **xaringan-smartify** uses [JQuery](https://jquery.com/). A browser showing your presentation will have to download approximately 70kB of Javascript code to run **xaringan-smartify**. This is usually negligible, especially as modern browsers will keep recently used Javascript files in a cache.
 
   If you want to avoid using this extra bandwidth when presenting your slides, you can download the [JQuery file](https://code.jquery.com/jquery-3.4.1.slim.min.js) and use it locally. In this case, don't forget to edit the `in_header.html` file to make it point to the downloaded file.
 
@@ -71,7 +71,7 @@ In the [example directory](https://github.com/fnaufel/xaringan-smartify/tree/mas
 
   This is not a bug with **xaringan-smartify**. In fact, Yihui Xie recommends [here](https://github.com/yihui/xaringan/issues/82#issuecomment-343957854) that display math should be all one line, from the initial `$$` to the final `$$`, or the output may be incorrect.
 
-* **Incorrect smart quotes:** sometimes, **xaringan-smartify** will insert the wrong type of quotes. You will find a couple of errors in the [sample presentation here](https://github.com/fnaufel/smartify/tree/master/example).
+* **Incorrect smart quotes:** sometimes, **xaringan-smartify** will insert the wrong type of quotes. You will find a couple of errors in the [sample presentation here](https://github.com/fnaufel/xaringan-smartify/tree/master/example).
 
   This happens because **xaringan-smartify** uses regular expressions to decide on the conversions, and regular expressions are not powerful enough to process nested structures (such as quotes). The alternative would be to try to use a parser for a context-free language, but I think that would be overkill, as the examples where **xaringan-smartify** fails are few and atypical.
   
